@@ -1,0 +1,94 @@
+
+body{
+    background-color: #E8F0F9;
+    color: #5B5B5B !important;
+}
+
+#banner{
+    background-color: #0D76BF;
+    color: white;
+}
+
+#logo{
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+#title{
+    float: left;
+}
+
+#github-text{
+    color: white;
+    float: right;
+    border: 1px solid white;
+    margin: 15px;
+}
+
+
+.clr{
+    clear: both;
+}
+
+
+
+.box{
+    border: 5px black solid;
+    background-color: #33C3F0;
+    border-radius: 20px;
+}
+
+.box h2{
+    text-decoration: underline;
+    background-color: #4c64dd;
+    color: white;
+    text-align: center;
+}
+
+.box p{
+    padding: 5px;
+}
+
+#description{
+    margin-top: 40px;
+}
+
+#footer{
+    margin-top: 40px;
+    width: 50%;
+}
+
+.slider{
+    margin: 20px;
+}
+
+
+
+/*    --- TABS ---    */
+
+
+#manhattan-control-tabs {
+    width: 400px;
+    height: 550px;
+    margin: 50px;
+    margin-right: 0px;
+    background-color: #fff;
+    font-size: 10pt;
+    float: left;
+}
+
+#manhattan-control-tabs .tab-content {
+    padding: 20px;
+}
+
+.manhattan-tab {
+    max-height: 460px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+#manhattan-control-tabs .tab--selected {
+    border-top: solid 2px #56B5FF !important;
+    color: #56B5FF !important;
+}
