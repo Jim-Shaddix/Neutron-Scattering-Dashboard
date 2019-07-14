@@ -1,5 +1,5 @@
 # Note: 
-this application is currently in development.
+This application is currently in development!
 
 # Neutron-Scattering-Dashboard
 Dashboard application displaying Neutron Scattering data for [Dr. Kate Ross's web site](http://www.rosslabcsu.com/).
@@ -14,7 +14,9 @@ experiments.
 
 This dashboard application was built using Python's dash library. 
 It allows for the user to sweep across a heat map that displays 
-Neutron Intensities that were recieved during an experiment. 
+Neutron Intensities that were recieved during an experiment. As you 
+sweep across the heatmap, a plot is updated that displays data associated
+with the current cross section. 
  
 ### Dependencies
 
