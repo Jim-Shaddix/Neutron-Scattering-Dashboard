@@ -18,7 +18,7 @@ Neutron Intensities that were recieved during an experiment. As you
 sweep across the heatmap, a plot is updated that displays data associated
 with the current cross section. 
 
-## Tab Bar and Colorscheme 
+## Tab Bar and Colorscheme Citation
 * The code for the tab bar (as well as the CSS colorscheme I used) was largely 
 based on (or taken from) the code examples in the [dash-bio repository](https://github.com/plotly/dash-bio/blob/master/tests/test_manhattan_plot.py).
  
