@@ -25,7 +25,8 @@ tabs = \
                                'spallation neutron sources that provide neutron radiation'
                                'of varying intensities. Neutron diffraction (elastic scattering)'
                                'techniques are used for analyzing structures; where inelastic neutron scattering '
-                               'is used in studying atomic vibrations and other excitations.')
+                               'is used in studying atomic vibrations and other excitations.'),
+                        dbc.Button("Ross Labs", color="primary", className="mr-1")
                     ])
                 ),
                 dcc.Tab(

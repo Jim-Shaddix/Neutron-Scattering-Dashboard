@@ -36,7 +36,7 @@ app.layout = html.Div([
         html.H1("Neutron Scattering", id="title"),
         html.A(
             html.P("View on Github", id="github-text"),
-            href="https://github.com/Jim-Shaddix",
+            href="https://github.com/Jim-Shaddix/Neutron-Scattering-Dashboard",
             id="github-link"
         ),
         html.Div(className="clr")
