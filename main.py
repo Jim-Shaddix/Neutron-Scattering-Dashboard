@@ -9,14 +9,38 @@ import numpy as np
 from DTabs import tabs
 
 # read in data
-df = pd.read_csv("Data/data_from_NaCaCo2F7_for_Plotly.csv", names=["x", "y", "z"])
+df = pd.read_csv("data/Data_From_1K0Slice_Integratedpm0p1.csv", names=["x", "y", "z"])
 x_unique = df.x.unique()
 y_unique = df.y.unique()
 
+# create z coordinate to use
+
+# - adding a minimum value
+new_z = df.z.copy()
+new_z.loc[new_z < 0] = 0
+
+# - adding a maximum value (0.057 tends to work (eliminates 3-actual values))
+#  - here I am going to put a much smaller thresold value
+max_val = 0.025
+new_z.loc[new_z > max_val] = max_val
+
 # Data for the Heat Map
 trace_heatmap = go.Heatmap(
-                    z=np.array(df.z).reshape(-1, (len(df.x.unique()))),
-                    colorscale='Viridis'
+                    z=np.array(new_z).reshape(-1, (len(df.x.unique()))),
+                    showscale=False,
+                    colorscale = [
+                        [0, 'rgb(0, 0, 0)'],         # black
+                        [0.1, 'rgb(153, 51, 255)'],  # purple
+                        [0.2, 'rgb(51, 51, 255)'],   # blue
+                        [0.3, 'rgb(51, 153, 255)'],  # light blue
+                        [0.4, 'rgb(51, 255, 255)'],  # teal
+                        [0.5, 'rgb(51, 255, 153)'],  # light green
+                        [0.6, 'rgb(51, 255, 51)'],   # green
+                        [0.7, 'rgb(153, 255, 51)'],  # yellow green
+                        [0.8, 'rgb(255, 255, 51)'],  # yellow
+                        [0.9, 'rgb(255, 153, 51)'],  # orange
+                        [1, 'rgb(255, 51, 51)']      # red
+                    ],
                 )
 
 # create application
@@ -122,6 +146,8 @@ def update_slider(slider_value, dropdown_value):
         x_cross = new_df.y
         x_label = "Y-Values"
     else:
+        print("slider value =", slider_value)
+        print("number of unique y values = ", len(y_unique))
         new_df = df[df.y == y_unique[slider_value]]
         y_cross = new_df.z
         x_cross = new_df.x
