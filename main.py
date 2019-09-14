@@ -6,6 +6,7 @@ from dash.dependencies import Input, Output, State
 import plotly.graph_objs as go
 import pandas as pd
 import numpy as np
+
 from DTabs import tabs
 
 # read in data
@@ -14,7 +15,6 @@ x_unique = df.x.unique()
 y_unique = df.y.unique()
 
 # create z coordinate to use
-
 # - adding a minimum value
 new_z = df.z.copy()
 new_z.loc[new_z < 0] = 0
@@ -179,7 +179,3 @@ def update_slider(slider_value, dropdown_value):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-
-
-
-# cool man
