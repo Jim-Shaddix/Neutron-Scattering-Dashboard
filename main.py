@@ -179,3 +179,5 @@ def update_slider(slider_value, dropdown_value):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+
+## Wondering how this gets updated
