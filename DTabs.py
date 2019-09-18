@@ -26,7 +26,10 @@ tabs = \
                                'of varying intensities. Neutron diffraction (elastic scattering)'
                                'techniques are used for analyzing structures; where inelastic neutron scattering '
                                'is used in studying atomic vibrations and other excitations.'),
-                        dbc.Button("Ross Labs", color="primary", className="mr-1")
+                        html.A(
+                               dbc.Button("Ross Labs", color="primary", className="mr-1"),
+                               href="http://www.rosslabcsu.com/"
+                        )
                     ])
                 ),
                 dcc.Tab(

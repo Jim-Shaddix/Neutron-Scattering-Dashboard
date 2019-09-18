@@ -42,5 +42,4 @@ pip install pandas==0.23.4
 * Dtabs.py: contains code for generating the ``Description`` and ``Graph`` tabs.
 * graphs.py: generates surface and scatter plots for the data.
 
-
 enjoy!

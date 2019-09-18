@@ -1,0 +1,9 @@
+dash==1.1.1
+dash-bootstrap-components==0.7.0
+dash-core-components==1.1.1
+dash-daq==0.1.7
+dash-html-components==1.0.0
+dash-renderer==1.0.0
+dash-table==4.1.0
+pandas==0.25.0
+numpy==1.16.4

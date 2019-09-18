@@ -64,31 +64,18 @@ body{
 }
 
 
+/*  New Stuff */
 
-/*    --- TABS ---    */
-
-
-#manhattan-control-tabs {
-    width: 400px;
-    height: 550px;
-    margin: 50px;
-    margin-right: 0px;
-    background-color: #fff;
-    font-size: 10pt;
-    float: left;
+/* div that surrounds the slider */
+#div-slider{
+    width: 300px;
+    text-align: center;
+    margin: 20px
 }
 
-#manhattan-control-tabs .tab-content {
-    padding: 20px;
+#slider-heatmap{
+    margin-left: 40px;
 }
 
-.manhattan-tab {
-    max-height: 460px;
-    overflow-y: auto;
-    padding-right: 15px;
-}
 
-#manhattan-control-tabs .tab--selected {
-    border-top: solid 2px #56B5FF !important;
-    color: #56B5FF !important;
-}
+
