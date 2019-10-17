@@ -20,7 +20,7 @@ layout_heatmap = go.Layout(
 
 layout_cross = go.Layout(
             title="Cross Section",
-            width=350,
+            width=400,
             height=350,
             paper_bgcolor='rgba(0,0,0,0)',
             plot_bgcolor='rgba(0,0,0,0)',
@@ -35,7 +35,7 @@ layout_cross = go.Layout(
                 zeroline=True, zerolinewidth=2, zerolinecolor='LightGrey',
             ),
             margin=go.layout.Margin(
-                l=50,
+                l=100,
                 r=20,
                 b=25,
                 t=65,

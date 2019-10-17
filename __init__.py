@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # read in data
-df = pd.read_csv("data/Data_From_1K0Slice_Integratedpm0p1.csv", names=["x", "y", "z"])
+df = pd.read_csv("data/1K0Slice_Integratedpm0p1.csv", names=["x", "y", "z"])
 x_unique = df.x.unique()
 y_unique = df.y.unique()
 

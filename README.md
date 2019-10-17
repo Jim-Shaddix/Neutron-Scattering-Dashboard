@@ -1,6 +1,3 @@
-# Note: 
-This application is currently in development!
-
 # Neutron-Scattering-Dashboard
 Dashboard application displaying Neutron Scattering data for [Dr. Kate Ross's web site](http://www.rosslabcsu.com/).
  
@@ -9,7 +6,7 @@ Dashboard application displaying Neutron Scattering data for [Dr. Kate Ross's we
 
 ## Description:
 This repository contains code for generating a dashboard application
-that displays graph's assocaited with [neurtron scattering][https://en.wikipedia.org/wiki/Neutron_scattering] 
+that displays  [neurtron scattering][https://en.wikipedia.org/wiki/Neutron_scattering] 
 experiments.
 
 This dashboard application was built using Python's dash library. 
@@ -18,23 +15,25 @@ Neutron Intensities that were recieved during an experiment. As you
 sweep across the heatmap, a plot is updated that displays data associated
 with the current cross section. 
 
-## Tab Bar and Colorscheme Citation
-* The code for the tab bar (as well as the CSS colorscheme I used) was largely 
-based on (or taken from) the code examples in the [dash-bio repository](https://github.com/plotly/dash-bio/blob/master/tests/test_manhattan_plot.py).
- 
-### Dependencies
 
-#### Application / Plot Dependencies
+## Dependencies
+* python3.7
+* Third party python libraries listed in **requirements.txt**
+
+## Installation Instructions
+
+1. Clone the repo
 ```Bash
-pip install dash==1.0.0  # The core dash backend
-pip install dash-daq==0.1.0  # DAQ components (newly open-sourced!)
-pip install dash-bootstrap-components==0.6.3 # dash bootstrap components
-pip install plotly==3.4.2  # plotly graphs
+git clone https://github.com/Jim-Shaddix/Personal-Website.git
 ```
-#### General Dependencies
+2. You can than use the following command to download all the third party libraries
+needed to run this program.
 ```Bash
-pip install numpy==1.15.4
-pip install pandas==0.23.4
+pip install -r requirements.txt
+```
+3. Run the application!
+```Bash
+python app.py
 ```
 
 #### Files
@@ -42,4 +41,6 @@ pip install pandas==0.23.4
 * Dtabs.py: contains code for generating the ``Description`` and ``Graph`` tabs.
 * graphs.py: generates surface and scatter plots for the data.
 
-enjoy!
+## Citations
+* The code for the tab bar (as well as the CSS colorscheme I used) was largely 
+based on (or taken from) the code examples in the [dash-bio repository](https://github.com/plotly/dash-bio/blob/master/tests/test_manhattan_plot.py).
