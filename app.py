@@ -8,12 +8,14 @@ This file initializes the application and formats
 how the application gets displayed.
 """
 
+# Support for Font Awsome (doesn't seem to work ... )
+# html.Script(src="https://kit.fontawesome.com/925f94215c.js")
+
 # create application
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # Layout
 app.layout = html.Div([
-
 
     # title
     html.Div([
@@ -26,6 +28,8 @@ app.layout = html.Div([
         html.H1("Neutron Scattering", id="title"),
         html.A(
             html.P("View on Github", id="github-text"),
+            # support for font awsome doesn't seem to be working
+            #html.I(className="fa fa-camera-retro fa-lg"),
             href="https://github.com/Jim-Shaddix/Neutron-Scattering-Dashboard",
             id="github-link"
         ),
@@ -41,7 +45,7 @@ app.layout = html.Div([
             # tabs
             dbc.Col([
                 tabs
-            ], width="auto", lg=6, xl=4),
+            ], width="auto", lg=5),
 
             # plots
             dbc.Col([
@@ -54,26 +58,15 @@ app.layout = html.Div([
                             id="graph-heatmap"
                         ),
 
-                        # slider
-                        html.Div([
-
-                            dcc.Slider(
-                                id="slider-heatmap",
-                                value=1,
-                                updatemode="drag"
-                            )
-
-                        ], id="div-slider")
-
-                    ], md=6, lg=12, xl=6),
+                    ], md=6, lg=12),
 
                     # cross section
                     dbc.Col([
                         dcc.Graph(id="graph-cross-section")
-                    ], md=6, lg=12, xl=6)
+                    ], md=6, lg=12)
 
                 ])
-            ], width="auto", lg=6)
+            ], width="auto", lg=7)
         ]),
     ], fluid=True)
 
@@ -94,12 +87,14 @@ def update_axis_dropdown(value):
 
     if value == "x":
         max_val = len(x_unique)-1
+        marks = [50,100,150,200,250,300,350]
     else:
         max_val = len(y_unique)-1
+        marks = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 
-    marks = [10]
-    while (marks[-1] + 10) < max_val:
-        marks.append(marks[-1] + 10)
+    #marks = [10]
+    #while (marks[-1] + 10) < max_val:
+    #    marks.append(marks[-1] + 10)
 
     marks = dict(zip(marks, [str(i) for i in marks]))
 
@@ -127,15 +122,13 @@ def update_slider(slider_value, dropdown_value):
         y_cross = new_df.z
         x_cross = new_df.y
     else:
-        print("slider value =", slider_value)
-        print("number of unique y values = ", len(y_unique))
         new_df = df[df.y == y_unique[slider_value]]
         y_cross = new_df.z
         x_cross = new_df.x
 
     # heatmap figure
     figure_heatmap=go.Figure(
-        data=[trace_heatmap, go.Scatter(x=x, y=y, marker={"color": "green"})],
+        data=[trace_heatmap, go.Scatter(x=x, y=y, marker={"color": "black"}, line={"width": 4})],
         layout=layout_heatmap
     )
 

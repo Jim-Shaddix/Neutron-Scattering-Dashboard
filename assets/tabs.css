@@ -23,3 +23,14 @@
     border-top: solid 2px #56B5FF !important;
     color: #56B5FF !important;
 }
+
+#input-axis-value{
+    height: 35px;
+    background-color: lightgrey;
+    padding: 5px;
+}
+
+.app-controls-name{
+    margin-top: 25px;
+    text-align: center;
+}

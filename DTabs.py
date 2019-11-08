@@ -40,67 +40,78 @@ tabs = \
 
 
                             # scroll-bar and input field
-                            dbc.Row([
+                             dbc.Row([
 
-                                # title and scrollbar
-                                dbc.Col([
+                                 # title and scrollbar
+                                 dbc.Col([
 
-                                    html.Div(
-                                        html.P("Scan Axis:")
-                                    ),
+                                     html.Div(
+                                         html.P("Scan Axis:")
+                                     ),
 
-                                    # axis-dropdown
-                                    dcc.Dropdown(
-                                        options=[
-                                            {'label': 'X', 'value': 'x'},
-                                            {'label': 'Y', 'value': 'y'}
-                                        ],
-                                        value='y',
-                                        id="dropdown-axis"
-                                    ),
+                                     # axis-dropdown
+                                     dcc.Dropdown(
+                                         options=[
+                                             {'label': 'X', 'value': 'x'},
+                                             {'label': 'Y', 'value': 'y'}
+                                         ],
+                                         value='y',
+                                         id="dropdown-axis"
+                                     ),
 
-                                ], width=6),
+                                 ], width=6),
 
 
-                                # title and input field
-                                dbc.Col([
+                                 # title and input field
+                                 dbc.Col([
 
-                                    html.Div(
-                                        html.P("Axis Value:")
-                                    ),
+                                     html.Div(
+                                         html.P("Axis Value:")
+                                     ),
 
-                                    dcc.Input(
-                                        placeholder='0',
-                                        type='number',
-                                        readOnly="readOnly",
-                                        value='0',
-                                        id="input-axis-value"
-                                    )
+                                     dcc.Input(
+                                         placeholder='0',
+                                         type='number',
+                                         readOnly="readOnly",
+                                         value='0',
+                                         id="input-axis-value"
+                                     )
 
-                                ], width=6)
+                                 ], width=6)
 
-                            ]),
+
+                             ]),
 
                             html.Div(
                                 className='app-controls-name',
                                 children=[
-                                    'Threshold value (red)'
+                                    'Set Axis Value'
                                 ]
                             ),
-                            dcc.Slider(
-                                id='mhp-slider-genome',
-                                className='control-slider',
-                                vertical=False,
-                                updatemode='mouseup',
-                                max=4,
-                                min=1,
-                                value=2,
-                                marks={
-                                    i + 1: '{}'.format(i + 1)
-                                    for i in range(4)
-                                },
-                                step=0.05
-                            ),
+
+                            # slider
+                            html.Div([
+
+                                dcc.Slider(
+                                    id="slider-heatmap",
+                                    value=1,
+                                )
+
+                            ], id="div-slider")
+                            #dcc.Slider(
+                            #    id='mhp-slider-genome',
+                            #    className='control-slider',
+                            #    vertical=False,
+                            #    updatemode='mouseup',
+                            #    max=4,
+                            #    min=1,
+                            #    value=2,
+                            #    marks={
+                            #        i + 1: '{}'.format(i + 1)
+                            #        for i in range(4)
+                            #    },
+                            #    step=0.05
+                            #),
                         ])
                     ])
                 )

@@ -17,13 +17,14 @@ body{
 
 #title{
     float: left;
+    margin-top: 10px
 }
 
 #github-text{
     color: white;
     float: right;
     border: 1px solid white;
-    margin: 15px;
+    margin: 17px;
 }
 
 
@@ -72,10 +73,5 @@ body{
     text-align: center;
     margin: 20px
 }
-
-#slider-heatmap{
-    margin-left: 40px;
-}
-
 
 
