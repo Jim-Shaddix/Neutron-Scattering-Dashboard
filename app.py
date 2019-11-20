@@ -11,7 +11,6 @@ how the application gets displayed.
 # Support for Font Awsome (doesn't seem to work ... )
 # html.Script(src="https://kit.fontawesome.com/925f94215c.js")
 
-# create application
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # Layout
