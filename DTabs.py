@@ -7,7 +7,7 @@ from typing import List
 # File containing the text that populates the tab
 neutron_file = "NeutronText.txt"
 
-def neutron_text() -> List[html.P]:
+def neutron_paragraphs() -> List[html.P]:
     """
     :return: a list of the html paragragh objects to use in the tab for 
              describing neutron scattering experiments
@@ -41,15 +41,16 @@ def neutron_text() -> List[html.P]:
                     continue
 
             # Case: general
-            line = line.replace("\n", " ")
+            line = line.strip() + " "
             curr_paragraph.append(line)
-
-    return all_paragraphs
 
     # Case: last paragrph
     if len(curr_paragraph) != 0:
         par = "".join(curr_paragraph)
         all_paragraphs.append(html.P(par))
+
+    return all_paragraphs
+
 
 
 tabs = \
@@ -60,22 +61,7 @@ tabs = \
                     value='what-is',
                     children=html.Div(className='control-tab', children=[
                         html.H4(className='what-is', children="What's Neutron Scattering All About?"),
-                        html.P(
-                               'Neutron scattering, the irregular dispersal of free ' 
-                               'neutrons by matter, can refer to either the naturally '
-                               'occurring physical process itself or to the man-made '
-                               'experimental techniques that use the natural process '
-                               'for investigating materials. The natural/physical phenomenon'
-                               'is of elemental importance in nuclear engineering and '
-                               'the nuclear sciences. Regarding the experimental technique,'
-                               'understanding and manipulating neutron scattering is fundamental '
-                               'to the applications used in crystallography, physics, physical chemistry,'
-                               ' biophysics, and materials research.'),
-                        html.P('Neutron scattering is practiced at research reactors and '
-                               'spallation neutron sources that provide neutron radiation'
-                               'of varying intensities. Neutron diffraction (elastic scattering)'
-                               'techniques are used for analyzing structures; where inelastic neutron scattering '
-                               'is used in studying atomic vibrations and other excitations.'),
+                        *neutron_paragraphs(),
                         html.A(
                                dbc.Button("Ross Labs", color="primary", className="mr-1"),
                                href="http://www.rosslabcsu.com/"
