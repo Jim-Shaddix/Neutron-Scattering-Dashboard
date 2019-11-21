@@ -1,0 +1,14 @@
+Neutron scattering is one of the most powerful 
+probes that condensed matter physicists possess. 
+The neutral charge and spin of the neutron allow the 
+neutron to probe the bulk of samples, while still 
+probing magnetic properties (such as spin waves). 
+Neutrons are normally generated at nuclear reactors 
+or spallation sources and guided towards a neutron 
+instrument. Modern day neutron instrumentation has 
+incredibly high resolution, allowing for a detailed
+mapping of the structure and excitations of condensed 
+matter systems. This detailed mapping has helped us 
+understand numerous different systems; such as 
+high-temperature superconductivity, quantum spin 
+liquids, and electrolytes for batteries.

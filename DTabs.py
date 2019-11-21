@@ -2,6 +2,56 @@ import dash_core_components as dcc
 import dash_html_components as html
 import dash_bootstrap_components as dbc
 
+from typing import List
+
+# File containing the text that populates the tab
+neutron_file = "NeutronText.txt"
+
+def neutron_text() -> List[html.P]:
+    """
+    :return: a list of the html paragragh objects to use in the tab for 
+             describing neutron scattering experiments
+    """
+
+    # Value to be returned
+    all_paragraphs = []
+
+    # Create Neutron Text
+    with open(neutron_file) as fd:
+
+        # Skip first blanck lines
+        first_flag = True 
+        curr_paragraph = []
+
+        for line in fd:
+
+            # Case: empty first lines
+            if first_flag:
+                if line.isspace():
+                    continue
+                else:
+                    first_flag = False
+
+            # Case: empty line encountered
+            if line.isspace():
+                if len(curr_paragraph) != 0:
+                    par = "".join(curr_paragraph)
+                    all_paragraphs.append(html.P(par))
+                else:
+                    continue
+
+            # Case: general
+            line = line.replace("\n", " ")
+            curr_paragraph.append(line)
+
+    return all_paragraphs
+
+    # Case: last paragrph
+    if len(curr_paragraph) != 0:
+        par = "".join(curr_paragraph)
+        all_paragraphs.append(html.P(par))
+
+
 tabs = \
     html.Div(id='manhattan-control-tabs', className='control-tabs', children=[
             dcc.Tabs(id='manhattan-tabs', value='what-is', children=[

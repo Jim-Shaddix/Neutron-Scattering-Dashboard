@@ -16,15 +16,15 @@ def yaxis_title(title):
     return yaxis
 
 layout_heatmap = go.Layout(
-    title=go.layout.Title(text="Intensity", xref="paper", x=0.5),
+    title=go.layout.Title(text="Intensity (arb. units)", xref="paper", x=0.5),
     width=450,
     height=350,
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)',
     xaxis=go.layout.XAxis(showgrid=False, zeroline=False,
-                          title=xaxis_title("X axis")),
+                          title=xaxis_title("[1K0] (r.l.u.)")),
     yaxis=go.layout.YAxis(showgrid=False, zeroline=False,
-                          title=yaxis_title("Yaxis")),
+                          title=yaxis_title("Energy Transfer (meV)")),
     margin=go.layout.Margin(
         l=50,
         r=0,
@@ -50,7 +50,7 @@ layout_cross = go.Layout(
         showline=True, linewidth=2, linecolor='black', mirror=True,
         showgrid=True, gridwidth=1, gridcolor='LightGrey',
         zeroline=True, zerolinewidth=2, zerolinecolor='LightGrey',
-        title=yaxis_title("Y axis")
+        title=yaxis_title("Intensity")
     ),
     margin=go.layout.Margin(
         l=50,
