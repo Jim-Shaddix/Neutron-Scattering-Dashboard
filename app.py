@@ -87,17 +87,15 @@ def update_axis_dropdown(value):
     if value == "x":
         max_val = len(x_unique)-1
         marks = [50,100,150,200,250,300,350]
+        default_value = 70
     else:
         max_val = len(y_unique)-1
         marks = [10, 20, 30, 40, 50, 60, 70, 80, 90]
-
-    #marks = [10]
-    #while (marks[-1] + 10) < max_val:
-    #    marks.append(marks[-1] + 10)
+        default_value = 15
 
     marks = dict(zip(marks, [str(i) for i in marks]))
 
-    return 1, max_val, 1, marks
+    return 1, max_val, default_value, marks
 
 
 @app.callback([Output('graph-heatmap', 'figure'),
@@ -136,6 +134,16 @@ def update_slider(slider_value, dropdown_value):
         data=[go.Scatter(x=x_cross, y=y_cross)],
         layout=layout_cross
     )
+
+    # Update x-axis of the cross section plot: based on scan direction
+    if dropdown_value == "x":
+        figure_cross.update_layout({"xaxis":{"title":"Energy Transfer (meV)"}})
+        figure_cross.update_yaxes(range=[-0.005, 0.05])
+        figure_cross.update_traces({"hovertemplate":"<b>Intensity</b>: %{y}<br>Energy Transfer (meV): %{x}<extra></extra>"})
+    else:
+        figure_cross.update_layout({"xaxis":{"title":"[1K0] (r.l.u.)"}})
+        figure_cross.update_yaxes(range=[-0.005, 0.05])
+        figure_cross.update_traces({"hovertemplate":"<b>Intensity</b>: %{y}<br>[1K0](r.l.u): %{x}<extra></extra>"})
 
     return figure_heatmap, figure_cross, slider_value
 

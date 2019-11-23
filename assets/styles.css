@@ -2,6 +2,7 @@
 body{
     background-color: #E8F0F9;
     color: #5B5B5B !important;
+    padding-bottom: 50px;
 }
 
 #banner{
@@ -75,3 +76,10 @@ body{
 }
 
 
+#graph-heatmap{
+    margin-top: 20px;
+}
+
+#graph-cross-section{
+    margin-top: 20px;
+}

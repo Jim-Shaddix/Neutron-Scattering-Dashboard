@@ -52,7 +52,6 @@ def neutron_paragraphs() -> List[html.P]:
     return all_paragraphs
 
 
-
 tabs = \
     html.Div(id='manhattan-control-tabs', className='control-tabs', children=[
             dcc.Tabs(id='manhattan-tabs', value='what-is', children=[
@@ -102,7 +101,7 @@ tabs = \
                                  dbc.Col([
 
                                      html.Div(
-                                         html.P("Axis Value:")
+                                         html.P("Axis Index:")
                                      ),
 
                                      dcc.Input(
@@ -121,7 +120,7 @@ tabs = \
                             html.Div(
                                 className='app-controls-name',
                                 children=[
-                                    'Set Axis Value'
+                                    'Set Axis Index'
                                 ]
                             ),
 

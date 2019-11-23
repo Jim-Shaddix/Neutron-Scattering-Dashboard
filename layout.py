@@ -1,5 +1,5 @@
 import plotly.graph_objects as go
-from __init__ import intensity
+from __init__ import intensity, heatmap_x_ticktext, heatmap_x_tickvals, heatmap_y_ticktext, heatmap_y_tickvals, heatmap_hovertemplate
 
 
 def xaxis_title(title):
@@ -22,14 +22,20 @@ layout_heatmap = go.Layout(
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)',
     xaxis=go.layout.XAxis(showgrid=False, zeroline=False,
-                          title=xaxis_title("[1K0] (r.l.u.)")),
+                          tickvals=heatmap_x_tickvals,
+                          ticktext=heatmap_x_ticktext,
+                          title=xaxis_title("[1K0] (r.l.u.)")
+                          ),
     yaxis=go.layout.YAxis(showgrid=False, zeroline=False,
-                          title=yaxis_title("Energy Transfer (meV)")),
+                          tickvals=heatmap_y_tickvals,
+                          ticktext=heatmap_y_ticktext,
+                          title=yaxis_title("Energy Transfer (meV)")
+                          ),
     margin=go.layout.Margin(
         l=50,
         r=0,
         b=0,
-        t=70,
+        t=30,
         pad=0
     )
 )
@@ -56,7 +62,7 @@ layout_cross = go.Layout(
         l=50,
         r=20,
         b=0,
-        t=65,
+        t=30,
         pad=0
     )
 )
@@ -78,4 +84,5 @@ trace_heatmap = go.Heatmap(
         [0.9, 'rgb(255, 153, 51)'],  # orange
         [1, 'rgb(255, 51, 51)']  # red
     ],
+    hovertemplate=heatmap_hovertemplate
 )
