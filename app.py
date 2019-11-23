@@ -26,11 +26,12 @@ app.layout = html.Div([
 
         html.H1("Neutron Scattering", id="title"),
         html.A(
-            html.P("View on Github", id="github-text"),
+            dbc.Button("Github", outline=True, color="info", className="mr-1",id="github-text"),
             # support for font awsome doesn't seem to be working
             #html.I(className="fa fa-camera-retro fa-lg"),
             href="https://github.com/Jim-Shaddix/Neutron-Scattering-Dashboard",
-            id="github-link"
+            id="github-link",
+            target="_Blanck"
         ),
         html.Div(className="clr")
     ], id="banner"),

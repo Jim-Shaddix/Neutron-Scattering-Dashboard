@@ -63,7 +63,8 @@ tabs = \
                         *neutron_paragraphs(),
                         html.A(
                                dbc.Button("Ross Labs", color="primary", className="mr-1"),
-                               href="http://www.rosslabcsu.com/"
+                               href="http://www.rosslabcsu.com/",
+                               target="_Blanck"
                         )
                     ])
                 ),
