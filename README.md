@@ -13,7 +13,7 @@ experiment.
 
 This dashboard application was built using Python's [Dash Framework](https://plot.ly/dash/). 
 The application allows for users to sweep across a heat map that displays 
-Neutron Intensities that were recieved during an experiment. As you 
+neutron intensities that were recieved during an experiment. As you 
 sweep across the heatmap, a plot is updated that displays data associated
 with the current cross section of the data that the user picked out.
 
