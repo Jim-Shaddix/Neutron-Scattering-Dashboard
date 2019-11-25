@@ -21,7 +21,8 @@ app.layout = html.Div([
 
         html.A(
             html.Img(src="assets/images/rosslab_logo.png", id="logo"),
-            href="http://www.rosslabcsu.com/"
+            href="http://www.rosslabcsu.com/",
+            target="_Blanck"
         ),
 
         html.H1("Neutron Scattering", id="title"),
