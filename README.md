@@ -8,14 +8,14 @@ You can see the application live [here](http://3.234.168.156/).
 
 ## Description:
 This repository contains code for generating a dashboard application
-that displays  [neurtron scattering](https://en.wikipedia.org/wiki/Neutron_scattering)
-experiments.
+that displays data from a [neutron scattering](https://en.wikipedia.org/wiki/Neutron_scattering)
+experiment.
 
-This dashboard application was built using Python's dash library. 
-It allows for the user to sweep across a heat map that displays 
+This dashboard application was built using Python's [Dash Framework](https://plot.ly/dash/). 
+The application allows for users to sweep across a heat map that displays 
 Neutron Intensities that were recieved during an experiment. As you 
 sweep across the heatmap, a plot is updated that displays data associated
-with the current cross section. 
+with the current cross section of the data that the user picked out.
 
 ## Prototyping
 If you are interested in seeing what considerations went into how I handled the data, or 
@@ -49,5 +49,5 @@ python app.py
 * layout.py: contains layouts for the surface and scatter plots for the data.
 
 ## Citations
-* The code for the tab bar (as well as the CSS colorscheme I used) was largely 
+* The code for the tab bar (as well as the CSS colorscheme I used for the website) was largely 
 based on (or taken from) the code examples in the [dash-bio repository](https://github.com/plotly/dash-bio/blob/master/tests/test_manhattan_plot.py).
