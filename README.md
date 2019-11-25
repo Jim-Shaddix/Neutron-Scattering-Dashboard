@@ -6,7 +6,7 @@ Dashboard application displaying Neutron Scattering data for [Dr. Kate Ross's we
 
 ## Description:
 This repository contains code for generating a dashboard application
-that displays  [neurtron scattering][https://en.wikipedia.org/wiki/Neutron_scattering] 
+that displays  [neurtron scattering](https://en.wikipedia.org/wiki/Neutron_scattering)
 experiments.
 
 This dashboard application was built using Python's dash library. 
@@ -15,6 +15,11 @@ Neutron Intensities that were recieved during an experiment. As you
 sweep across the heatmap, a plot is updated that displays data associated
 with the current cross section. 
 
+## Prototyping
+If you are interested in seeing what considerations went into how I handled the data, or 
+what kind of data is handled by this application, you can read the [jupyter notebook](plots/plots.ipynb)
+that I generated for prototyping this dashboard.
+![](assets/images/notebook.png)
 
 ## Dependencies
 * python3.7
@@ -39,7 +44,7 @@ python app.py
 #### Files
 * main.py: contains code for running the application.
 * Dtabs.py: contains code for generating the ``Description`` and ``Graph`` tabs.
-* graphs.py: generates surface and scatter plots for the data.
+* layout.py: contains layouts for the surface and scatter plots for the data.
 
 ## Citations
 * The code for the tab bar (as well as the CSS colorscheme I used) was largely 
