@@ -46,7 +46,7 @@ python app.py
 #### Files
 * main.py: contains code for running the application.
 * Dtabs.py: contains code for generating the ``Description`` and ``Graph`` tabs.
-* layout.py: contains layouts for the surface and scatter plots for the data.
+* layout.py: contains layouts for the surface and scatter plot.
 
 ## Citations
 * The code for the tab bar (as well as the CSS colorscheme I used for the website) was largely 
