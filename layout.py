@@ -56,7 +56,7 @@ layout_cross = go.Layout(
         showline=True, linewidth=2, linecolor='black', mirror=True,
         showgrid=True, gridwidth=1, gridcolor='LightGrey',
         zeroline=True, zerolinewidth=2, zerolinecolor='LightGrey',
-        title=yaxis_title("Intensity")
+        title=yaxis_title("Intensity (arb. units)")
     ),
     margin=go.layout.Margin(
         l=50,

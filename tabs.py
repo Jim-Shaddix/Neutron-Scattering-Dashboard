@@ -88,10 +88,11 @@ tabs = \
                                      # axis-dropdown
                                      dcc.Dropdown(
                                          options=[
-                                             {'label': 'X', 'value': 'x'},
-                                             {'label': 'Y', 'value': 'y'}
+                                             {'label': '[1KO](r.l.u.)', 'value': 'x'},
+                                             {'label': 'Energy Transfer (meV)', 'value': 'y'}
                                          ],
                                          value='y',
+                                         clearable=False,
                                          id="dropdown-axis"
                                      ),
 
